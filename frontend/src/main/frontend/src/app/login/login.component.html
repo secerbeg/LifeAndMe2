@@ -1,0 +1,31 @@
+<br />
+<br />
+<br />
+
+
+	<div class="ui one column stackable center aligned page grid">
+		<div class="container">
+			<img src="/assets/images/SB-admin.png" width="150px" class="" />
+			<div class="title">Sign in to Continue</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="input-field col s12">
+						<input [(ngModel)]="user.email" id="email" type="email"
+							class="validate" placeholder="Email">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input [(ngModel)]="user.password" id="password" type="password"
+							class="validate" placeholder="Password">
+					</div>
+				</div>
+
+				<br /> <a (click)="login()" class="ui positive left floated button"
+					type="submit" name="action"> Log in </a> &nbsp; &nbsp; &nbsp; <a
+					type="submit" class="ui button" [routerLink]="['register']">Register</a>
+				<br /> <span>{{errorMsg}}</span>
+			</div>
+		</div>
+	</div>
